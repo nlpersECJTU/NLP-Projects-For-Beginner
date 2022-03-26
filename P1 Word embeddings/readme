@@ -1,1 +1,5 @@
-For Word embeddings
+Word embeddings
+    CBOW model: Distributed Representations ofWords and Phrases and their Compositionality
+
+Learn task-specific word embedding via text classification:
+    Improving Implicit Discourse Relation Recognition with Discourse-specificWord Embeddings
