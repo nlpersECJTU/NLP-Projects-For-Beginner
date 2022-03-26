@@ -1,3 +1,8 @@
-Machine Translation
-     Encoder+Decoder+Attention: 
-     Transformer:  Attention is All you Need, http://nlp.seas.harvard.edu/2018/04/03/attention.html
+Encoder+Decoder+Attention: 
+     Sequence to Sequence Learning with Neural Networks
+     Neural Machine Translation by Jointly Learning to Align and Translate
+     https://towardsdatascience.com/attention-seq2seq-with-pytorch-learning-to-invert-a-sequence-34faf4133e53
+
+Transformer:  
+     Attention is All you Need
+     http://nlp.seas.harvard.edu/2018/04/03/attention.html
