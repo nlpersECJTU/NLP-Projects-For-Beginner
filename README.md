@@ -1,3 +1,3 @@
 # Projects-For-Bigenner
 
-Five typical projects for NLP beginners.
+Typical projects for NLP beginners.
