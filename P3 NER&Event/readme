@@ -1,0 +1,6 @@
+Named Entity Recognition (NER) 
+   1. BiLSTM+CRF: Bidirectional LSTM-CRF models for sequence tagging
+   2. Word-Word relation: Uniﬁed Named Entity Recognition as Word-Word Relation Classification
+
+Event Detection:
+   1. BiLSTM+CRF: 
