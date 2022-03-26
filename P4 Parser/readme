@@ -2,5 +2,9 @@ Dependency Parser:
    Transition-based method: Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations
    Graph-based method:
    
+   https://github.com/arkhalid/XCS224N-A3
+   https://hub.baai.ac.cn/view/3201 汉语依存树库
+   http://hlt.suda.edu.cn/index.php/COPAD
+   
 Constituency Parser:
    Constituency Parsing with a Self-Attentive Encoder
