@@ -9,7 +9,7 @@ Typical projects for NLP beginners.
 ## P4 Parser
 ### Dependency Parser 
    
-   Paper: Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations
+   - Paper: Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations
    1. Transition-based method: Dependency Parser/transition-parser
    2. Graph-based method: Dependency Parser/graph-parser
   
