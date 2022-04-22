@@ -1,0 +1,28 @@
+{
+  "dataset": "en-ud-conllu",
+  "dtrain": "../corpus/en-ud-train.conllu",
+  "ddev": "../corpus/en-ud-dev.conllu",
+  "dtest": "../corpus/en-ud-test.conllu",
+
+  "outdir": "model",
+  "logdir": "log",
+  "vocab": "model/en-ud-conllu.vocab",
+  "model": "model/en-ud-conllu.model",
+
+  "wdims": 100,
+  "pdims": 25,
+  "rdims": 25,
+
+  "activation": "tanh",
+  "lstm_layers": 2,
+  "lstm_hidden_size": 256,
+  "hidden_size": 100,
+
+  "epochs": 20,
+  "batch_size": 32,
+  "optim": "adam",
+  "lr": 0.1,
+  "dropout": 0.2,
+  "seed": 123,
+  "debug": 0
+}

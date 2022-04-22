@@ -1,0 +1,28 @@
+{
+  "dataset": "zh-ud-conllu",
+  "dtrain": "../corpus/zh-ud-train.conllu",
+  "ddev": "../corpus/zh-ud-dev.conllu",
+  "dtest": "../corpus/zh-ud-test.conllu",
+
+  "outdir": "model",
+  "logdir": "log",
+  "vocab": "model/zh-ud-conllu.vocab",
+  "model": "model/zh-ud-conllu.model",
+
+  "wdims": 100,
+  "pdims": 25,
+  "rdims": 25,
+
+  "activation": "tanh",
+  "lstm_layers": 2,
+  "lstm_hidden_size": 256,
+  "hidden_size": 100,
+
+  "epochs": 20,
+  "batch_size": 32,
+  "optim": "adam",
+  "lr": 0.1,
+  "dropout": 0.2,
+  "seed": 123,
+  "debug": 0
+}
