@@ -10,7 +10,7 @@ pytorch 1.3 and above
 ### Dependency Parser 
    
    - Paper: Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations \
-   Transition-based method: Dependency Parser/transition-parser \
-   Graph-based method: Dependency Parser/graph-parser \
+   1. Transition-based method: P4 parser/Dependency Parser/transition-parser \
+   2. Graph-based method: P4 parser/Dependency Parser/graph-parser \
    data: 
   
