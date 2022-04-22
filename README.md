@@ -2,6 +2,10 @@
 
 Typical projects for NLP beginners.
 
+## Environment
+1. python 3.8
+2. pytorch 1.3 and above
+
 ## P4 Parser
 ### Dependency Parser 
    
