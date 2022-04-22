@@ -2,8 +2,6 @@
 
 Typical projects for NLP beginners.
 
-Paper: Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations
-
 ## Environment
 python 3.8 \
 pytorch 1.3 and above
