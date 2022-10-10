@@ -1,7 +1,5 @@
-Sentence-level text classification
-    BiLSTM-based model: 
-    CNN-based model: Convolutional Neural Networks for Sentence Classification
-    Attention-based model: Attention-based LSTM for Aspect-level Sentiment Classification
 
 Document-level text classification
     HAN model: Hierarchical Attention Networks for Document Classification
+    
+
