@@ -1,0 +1,30 @@
+{
+  "dataset": "imdb",
+  "dtrain": "../corpus/imdb/train.txt",
+  "ddev": "../corpus/imdb/dev.txt",
+  "dtest": "../corpus/imdb/test.txt",
+  "word_embed": "../corpus/imdb/imdb-embedding-200d.txt",
+  "num_classes": 10,
+
+  "outdir": "model",
+  "logdir": "log",
+
+  "max_word_num": 50,
+  "max_sent_num": 40,
+  
+  "user_dim": 25,
+  "prod_dim": 25,
+  
+  "word_dim": 200,
+  "finetune": 0,
+  "word_hidden_size": 200,
+  "sent_hidden_size": 200,
+  
+  "device": 0,
+  "epochs": 100,
+  "batch_size": 32,
+  "lr": 0.0005,
+  "dropout": 0.2,
+  "stop_at": 20,
+  "eval_at": 0.1
+}
