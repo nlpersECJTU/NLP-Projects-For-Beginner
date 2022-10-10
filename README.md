@@ -13,11 +13,13 @@ pytorch 1.3 or above
    - Paper1: Hierarchical Attention Networks for Document Classification (NAACL 2016) 
    - Paper2: Learning Semantic Representations of Users and Products for Document Level Sentiment Classification (ACL 2015)
    - Paper3: Improving Review Representations with User Attention and Product Attention for Sentiment Classification (AAAI 2018)
-   1. Hierarchical Attention Model (HAN): P2 Text Classification/SentimentUP/HAN 
-   2. Hierarchical Attention Model (HAN) With User and Product Attributes: P2 Text Classification/SentimentUP/HAN_UP
-   3. data: the Yelp 2013, Yelp 2014, IMDB datasets are provided by authors of Paper2. 
-   4. word embeddings: provided by authors of Paper3
-   5. download data and embeddings: 
+   1. Hierarchical Attention Model (HAN), without User and Product Attributes: P2 Text Classification/SentimentUP/HAN. 
+   2. Hierarchical Attention Model (HAN), With User and Product Attributes: P2 Text Classification/SentimentUP/HAN_UP. 
+                   User attribute is incorporated at word-level, sentence-level and document level. 
+                   Product attribute is incorporated into word-level and sentence-level attentions.
+   4. data: the Yelp 2013, Yelp 2014, IMDB datasets are provided by authors of Paper2. 
+   5. word embeddings: provided by authors of Paper3
+   6. download data and embeddings: https://drive.google.com/file/d/18dXcCXl5txAf-WaxlXgyuPVdUkbXCkmF/view?usp=sharing
 
 
 ## P4 Parser
