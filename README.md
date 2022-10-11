@@ -34,8 +34,7 @@ PyTorch 1.3 or above
    5. Word embeddings: provided by authors of Paper3
    6. Download data and embeddings: https://drive.google.com/file/d/18dXcCXl5txAf-WaxlXgyuPVdUkbXCkmF/view?usp=sharing
    
-   - Results
-   ACC
+   - ACC Results
    
    Model    |    IMDB      |    Yelp 2013  | Yelp 2014
    -------- |--------------|---------------|-----------  
