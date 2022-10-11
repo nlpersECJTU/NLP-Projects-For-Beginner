@@ -7,6 +7,18 @@ Python 3.8 \
 PyTorch 1.3 or above
 
 
+## P1 Word Embeddings
+### Learning Word Embeddings    
+   
+   - Paper1: Distributed Representations ofWords and Phrases and their Compositionality (NIPS 2013) 
+   - Paper2: Learning Sentiment-Specific Word Embedding for Twitter Sentiment Classification (ACL 2014)
+   - Paper3: Improving Implicit Discourse Relation Recognition with Discourse-specificWord Embeddings (ACL 2017)
+   1. SimpCBOW: Learning general word embeddings based on unlabeled data using the CBOW model in Paper 1 (simplified here, just for demo). 
+   2. DSWE: Learn task-specific word embedding via the Connective classification task as that in Paper 3, the labeled data is necessary. 
+            DSEW is inspired by the model in Paper2, which is proposed to learn the sentiment-specific word embeddings.
+   3. Code and Data: to be continiued...
+
+
 ## P2 Text Classification
 ### Document-level Sentiment Classificaiton 
    
