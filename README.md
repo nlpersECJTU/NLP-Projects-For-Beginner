@@ -38,6 +38,7 @@ PyTorch 1.3 or above
    
    Model    |    IMDB      |    elp 2013   | Yelp 2014
    -------- |--------------|---------------|----------
+            |     Acc | RMSE     |    Acc | RMSE       | Acc | RMSE 
    HAN      |     0.44     |    0.67       | 0.67
 
 
