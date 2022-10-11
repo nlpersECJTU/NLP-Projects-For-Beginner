@@ -26,10 +26,10 @@ class ProdAttnLayer(nn.Module):
     def forward(self, inpt, p, inpt_lens=None):
         inpt_p = torch.tanh_(self.attn_inpt(inpt) + self.attn_p(p))
         a = self.contx(inpt_p)
-        # w/o mask
-        # if inpt_lens is not None:
-        #     m = inpt_lens[:, :, None]
-        #     a = a - (1 - m) * 1e31
+        # mask
+        if inpt_lens is not None:
+            m = inpt_lens[:, :, None]
+            a = a - (1 - m) * 1e31
         a = F.softmax(a, dim=1)
         s = (a * inpt).sum(1)
 
@@ -155,7 +155,7 @@ class HAN_UP(nn.Module):
         # transition sentence representaions conditioning on user
         doc_rep = self.doc_trans(doc_rep, u_embed)
         # and normalize them, needed?
-        # doc_rep = self.doc_norm(doc_rep)
+        doc_rep = self.doc_norm(doc_rep)
         doc_rep = self.drop(doc_rep)
 
         # classification
