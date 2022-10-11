@@ -35,11 +35,13 @@ PyTorch 1.3 or above
    6. Download data and embeddings: https://drive.google.com/file/d/18dXcCXl5txAf-WaxlXgyuPVdUkbXCkmF/view?usp=sharing
    
    - Results
+   ACC
    
-   Model    |    IMDB      |    elp 2013   | Yelp 2014
-   -------- |--------------|---------------|----------
-            |     Acc | RMSE     |    Acc | RMSE       | Acc | RMSE 
-   HAN      |     0.44     |    0.67       | 0.67
+   Model    |    IMDB      |    Yelp 2013  | Yelp 2014
+   -------- |--------------|---------------|-----------  
+   HAN      |    48.4      |    64.5       |   65.1
+   -------- |--------------|---------------|-----------  
+   HAN_UP   |    56.6      |    68.9       |   69.2
 
 
 ## P4 Parser
