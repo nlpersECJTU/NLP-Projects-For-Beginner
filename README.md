@@ -26,7 +26,7 @@ PyTorch 1.3 or above
 ## P4 Parser
 ### Dependency Parser 
    
-   - Paper: Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations 
+   - Paper: Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations (TACL 2016) 
    1. Transition-based model: P4 parser/Dependency Parser/transition-parser 
    2. Graph-based model: P4 parser/Dependency Parser/graph-parser
    3. Data: https://drive.google.com/file/d/1z8Q-dIgqJSA4sWC69AXxJjY3VLtLWdeJ/view?usp=sharing
