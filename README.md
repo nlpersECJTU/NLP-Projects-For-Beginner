@@ -33,6 +33,11 @@ PyTorch 1.3 or above
    4. Data: the Yelp 2013, Yelp 2014, IMDB datasets are provided by authors of Paper2. 
    5. Word embeddings: provided by authors of Paper3
    6. Download data and embeddings: https://drive.google.com/file/d/18dXcCXl5txAf-WaxlXgyuPVdUkbXCkmF/view?usp=sharing
+   
+   - Results
+   Model    |    IMDB      |    elp 2013   | Yelp 2014
+   -------- |--------------|---------------|----------
+   HAN      |     0.44     |    0.67       | 0.67
 
 
 ## P4 Parser
