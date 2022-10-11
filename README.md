@@ -26,7 +26,7 @@ PyTorch 1.3 or above
    - Paper2: Learning Semantic Representations of Users and Products for Document Level Sentiment Classification (ACL 2015)
    - Paper3: Improving Review Representations with User Attention and Product Attention for Sentiment Classification (AAAI 2018)
    1. Hierarchical Attention Model without User and Product Attributes (HAN) : P2 Text Classification/SentimentUP/HAN. 
-   2. Hierarchical Attention Model With User and Product Attributes (HAN_UP), : P2 Text Classification/SentimentUP/HAN_UP. 
+   2. Hierarchical Attention Model With User and Product Attributes (HAN_UP) : P2 Text Classification/SentimentUP/HAN_UP. 
                    Different from the model in AAAI 2018, we leverage User and Prodcut attributes in different ways.
                    Specifically, the User attribute is incorporated at word-level, sentence-level and document level in a fusion way,  
                    while the Product attribute is incorporated into word-level and sentence-level attention mechanisms following AAAI 2018.
