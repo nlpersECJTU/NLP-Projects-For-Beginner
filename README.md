@@ -6,6 +6,11 @@ Typical projects for NLP beginners.
 Python 3.8 \
 PyTorch 1.0 or above
 
+## Tutorial
+
+- PyTorch Tutorial: https://github.com/yunjey/pytorch-tutorial/tree/master/tutorials
+- NLP Tutorial: https://github.com/graykode/nlp-tutorial
+
 
 ## P1 Word Embeddings
 ### Learning Word Embeddings    
