@@ -4,7 +4,7 @@ Typical projects for NLP beginners.
 
 ## Environment
 Python 3.8 \
-PyTorch 1.3 or above
+PyTorch 1.0 or above
 
 
 ## P1 Word Embeddings
