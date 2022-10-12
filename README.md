@@ -24,7 +24,8 @@ PyTorch 1.0 or above
             DSEW is inspired by the model in Paper2, which is proposed to learn the sentiment-specific word embeddings.
    3. Code and Data: to be continiued...
    4. Result:
-   ![DSWE](https://github.com/nlpersECJTU/NLP-Projects-For-Beginner/blob/main/pic/test.jpg)
+   
+   ![DSWE](pic/test.jpg)
 
 ## P2 Text Classification
 ### Document-level Sentiment Classificaiton 
