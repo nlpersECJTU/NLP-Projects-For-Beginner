@@ -25,7 +25,7 @@ PyTorch 1.0 or above
    3. Code and Data: to be continiued...
    4. Result:
    
-   ![DSWE](pic/test.jpg)
+   <!--- ![DSWE](pic/test.jpg) -->
 
 ## P2 Text Classification
 ### Document-level Sentiment Classificaiton 
