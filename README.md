@@ -8,6 +8,7 @@ PyTorch 1.0 or above
 
 ## Tutorial
 
+- PyTorch Tutorail: https://pytorch.org/tutorials/
 - PyTorch Tutorial: https://github.com/yunjey/pytorch-tutorial/tree/master/tutorials
 - NLP Tutorial: https://github.com/graykode/nlp-tutorial
 
