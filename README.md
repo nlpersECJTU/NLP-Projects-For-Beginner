@@ -33,6 +33,8 @@ PyTorch 1.0 or above
    DSWE
    ![DSWE](pic/dswe1.jpg)
 
+
+
 ## P2 Text Classification
 ### Document-level Sentiment Classificaiton 
    
@@ -57,6 +59,12 @@ PyTorch 1.0 or above
    HAN_UP      |    56.6      |    68.9       |   69.2
 
 
+
+
+## P3 NER&Event
+### Event Detection 
+
+
 ## P4 Parser
 ### Dependency Parser 
    
@@ -65,3 +73,6 @@ PyTorch 1.0 or above
    2. Graph-based model: P4 parser/Dependency Parser/graph-parser
    3. Data: https://drive.google.com/file/d/1z8Q-dIgqJSA4sWC69AXxJjY3VLtLWdeJ/view?usp=sharing
    4. Reference: https://github.com/elikip/bist-parser/
+
+
+
