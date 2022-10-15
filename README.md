@@ -31,7 +31,7 @@ PyTorch 1.0 or above
    ![DSWE](pic/cbow.jpg)
    
    DSWE
-   
+   ![DSWE](pic/dswe1.jpg)
 
 ## P2 Text Classification
 ### Document-level Sentiment Classificaiton 
