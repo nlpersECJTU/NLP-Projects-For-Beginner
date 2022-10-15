@@ -23,9 +23,12 @@ PyTorch 1.0 or above
    2. DSWE: Learn task-specific word embedding via the Connective classification task as that in Paper 3, the labeled data is necessary. 
             DSEW is inspired by the model in Paper2, which is proposed to learn the sentiment-specific word embeddings.
    3. Code and Data: to be continiued...
-   4. Result:
+   4. Result (call distance.py to show the top-n most similar words). The most similar words in CBOW and DSWE to 'not', 'good' and 'apple' are shown, respectively.
+   
    
    <!--- ![DSWE](pic/test.jpg) -->
+   ![DSWE](pic/cbow.jpg)
+   ![DSWE](pic/dswe.jpg)
 
 ## P2 Text Classification
 ### Document-level Sentiment Classificaiton 
