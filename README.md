@@ -22,7 +22,7 @@ PyTorch 1.0 or above
    1. SimpCBOW: Learning general word embeddings based on unlabeled data using the CBOW model in Paper 1 (simplified here, just for demo). 
    2. DSWE: Learn task-specific word embedding via the Connective classification task as that in Paper 3, the labeled data is necessary. 
             DSEW is inspired by the model in Paper2, which is proposed to learn the sentiment-specific word embeddings.
-   3. Data: to be continiued...
+   3. Data: https://pan.baidu.com/s/12uqXtjCBud0-A9Ilda1kOg?pwd=324q, password: 324q 
    4. Result (call distance.py to show the top-n most similar words). The most similar words in CBOW and DSWE to 'not', 'good' and 'apple' are shown, respectively.
    
    
