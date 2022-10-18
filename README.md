@@ -64,9 +64,10 @@ PyTorch 1.0 or above
 
 ## P3 NER&Event
 ### Chinese Named Entity Recognition
-- Paper1: Bidirectional LSTM-CRF Models for Sequence Tagging (2015)
-- Paper2: 基于深度学习的命名实体识别综述 (中文信息学报 2021)
-- Paper3: 基于深度学习的中文命名实体识别最新研究进展综述 (中文信息学报 2022)
+- Paper1: Bidirectional LSTM-CRF Models for Sequence Tagging (Arxiv 2015)
+- Paper2: A Local Detection Approach for Named Entity Recognition and Mention Detection (ACL 2017)
+- Paper3: 基于深度学习的命名实体识别综述 (中文信息学报 2021)
+- Paper4: 基于深度学习的中文命名实体识别最新研究进展综述 (中文信息学报 2022)
 
 1. BERT + Softmax
 2. BERT + CRF
