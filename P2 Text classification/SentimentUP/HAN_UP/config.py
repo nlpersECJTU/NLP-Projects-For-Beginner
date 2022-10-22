@@ -28,7 +28,7 @@ class Config:
         self.word_hidden_size = config['word_hidden_size']
         self.sent_hidden_size = config['sent_hidden_size']
 
-        self.epochs = config['device']
+        self.device = config['device']
         self.epochs = config['epochs']
         self.batch_size = config['batch_size']
         self.lr = config['lr']
