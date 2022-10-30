@@ -42,6 +42,7 @@ PyTorch 1.0 or above
    - Paper1: Hierarchical Attention Networks for Document Classification (NAACL 2016) 
    - Paper2: Learning Semantic Representations of Users and Products for Document Level Sentiment Classification (ACL 2015)
    - Paper3: Improving Review Representations with User Attention and Product Attention for Sentiment Classification (AAAI 2018)
+   - Web: 
    1. Hierarchical Attention Model without User and Product Attributes (HAN) : P2 Text Classification/SentimentUP/HAN. 
    2. Hierarchical Attention Model With User and Product Attributes (HAN_UP) : P2 Text Classification/SentimentUP/HAN_UP. 
                    Different from the model in AAAI 2018, we leverage User and Prodcut attributes in different ways.
@@ -68,6 +69,7 @@ PyTorch 1.0 or above
 - Paper2: A Local Detection Approach for Named Entity Recognition and Mention Detection (ACL 2017)
 - Paper3: 基于深度学习的命名实体识别综述 (中文信息学报 2021)
 - Paper4: 基于深度学习的中文命名实体识别最新研究进展综述 (中文信息学报 2022)
+- Web: https://zhuanlan.zhihu.com/p/44042528
 
 1. BERT + Softmax
 2. BERT + CRF
