@@ -78,7 +78,13 @@ PyTorch 1.0 or above
 2. BERT + CRF: a classific model, using a neural CRF layer to model the dependence of labels (B-PER is usually followed by I-PER).
 3. BERT + Span: check out the begin labels and end labels respectively, then pair the nearest begin label and end label with the same entity type as an entity.
 
-to be continiued...
+- F1 Results (entity)
+   
+   Model           |    Resume      |    ClueNer(dev)  |   Weibo
+   --------------- |----------------|------------------|-----------  
+   BERT + Softmax  |    95.54       |    78.51         |   48.58
+   BERT + CRF      |    95.33       |    78.63         |   50.22
+   BERT + Span     |    95.97       |    79.98         |   51.13
 
 
 ## P4 Parser
