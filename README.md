@@ -72,11 +72,13 @@ PyTorch 1.0 or above
 - Paper5: 基于深度学习的命名实体识别综述 (中文信息学报 2021)
 - Paper6: 基于深度学习的中文命名实体识别最新研究进展综述 (中文信息学报 2022)
 - CRF: https://zhuanlan.zhihu.com/p/44042528
-- Data: cner/data
+- Data: cner/data, CLUENER (https://github.com/CLUEbenchmark/CLUENER)
+- Thanks: the key code is borrowed from https://github.com/nlpersECJTU/BERT-NER-Pytorch
 
 1. BERT + Softmax: simply stack a Softmax layer on outputs of BERT for Chinese NER.
 2. BERT + CRF: a classific model, using a neural CRF layer to model the dependence of labels (B-PER is usually followed by I-PER).
 3. BERT + Span: check out the begin labels and end labels respectively, then pair the nearest begin label and end label with the same entity type as an entity.
+4. BERT + Word-Word (Paper 4): https://github.com/ljynlp/W2NER
 
 - F1 Results (entity)
    
@@ -86,6 +88,7 @@ PyTorch 1.0 or above
    BERT + CRF      |    95.33       |    78.63         |   50.22
    BERT + Span     |    95.97       |    79.98         |   51.13
 
+Note that, the F1 results on ClueNer and Weibo are not comparable with F1 scores in Papers.
 
 ## P4 Parser
 ### Dependency Parser 
