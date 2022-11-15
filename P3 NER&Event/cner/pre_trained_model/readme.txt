@@ -1,1 +1,1 @@
-download the pre-trained model here
+download the Chinese pre-trained model here
