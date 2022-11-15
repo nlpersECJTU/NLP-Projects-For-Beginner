@@ -106,7 +106,7 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
 ## P5 Seq2Seq
 ### Machine Translation
 
-- Paper1: Neural Machine Translation by Jointly Learning to Align and Translate (IcLR 2015)
+- Paper1: Neural Machine Translation by Jointly Learning to Align and Translate (ICLR 2015)
 - Paper2: Attention is All You Need (NIPS 2017)
 - The Annotated Transformer: http://nlp.seas.harvard.edu/2018/04/03/attention.html
 
