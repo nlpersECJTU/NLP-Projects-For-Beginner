@@ -1,0 +1,24 @@
+{
+  "dataset": "cluener",
+  "dtrain": "corpus/cluener.char.bio.train",
+  "ddev": "corpus/cluener.char.bio.dev",
+  "dtest": "corpus/cluener.char.bio.test",
+
+  "bert_dir": "pre_trained_model/bert-base-chinese",
+  "train_max_seq_length": 128,
+  "eval_max_seq_length": 512,
+
+  "ckpdir": "ckpoint",
+  "logdir": "log",
+
+  "device": 0,
+  "epochs": 20,
+  "batch_size": 32,
+  "bert_lr": 3e-5,
+  "other_lr": 1e-3,
+  "clip_grad_norm": 5.0,
+  "dropout": 0.1,
+  "weight_decay": 0.0001,
+  "save_steps": 150,
+  "warmup_proportion": 0.1
+}
