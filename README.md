@@ -88,7 +88,7 @@ PyTorch 1.0 or above
    BERT + CRF      |    95.33       |    78.63         |   50.22
    BERT + Span     |    95.97       |    79.98         |   51.13
 
-Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 scores in recent Papers.
+Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 scores reported in recent Papers.
 
 ## P4 Parser
 ### Dependency Parser 
