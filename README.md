@@ -73,7 +73,7 @@ PyTorch 1.0 or above
 - Paper6: 基于深度学习的中文命名实体识别最新研究进展综述 (中文信息学报 2022)
 - CRF: https://zhuanlan.zhihu.com/p/44042528
 - Data: cner/data, CLUENER (https://github.com/CLUEbenchmark/CLUENER)
-- Thanks: the key code is borrowed from https://github.com/nlpersECJTU/BERT-NER-Pytorch
+- Thanks: the key code is borrowed from https://github.com/lonePatient/BERT-NER-Pytorch
 
 1. BERT + Softmax: simply stack a Softmax layer on outputs of BERT for Chinese NER.
 2. BERT + CRF: a classific model, using a neural CRF layer to model the dependence of labels (B-PER is usually followed by I-PER).
