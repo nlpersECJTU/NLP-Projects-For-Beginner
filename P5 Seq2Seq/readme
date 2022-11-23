@@ -1,7 +1,3 @@
-Encoder+Decoder+Attention: 
-     Sequence to Sequence Learning with Neural Networks
-     Neural Machine Translation by Jointly Learning to Align and Translate
-     https://towardsdatascience.com/attention-seq2seq-with-pytorch-learning-to-invert-a-sequence-34faf4133e53
 
 Transformer:  
      Attention is All you Need
