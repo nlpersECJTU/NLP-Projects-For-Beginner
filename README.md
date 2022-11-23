@@ -118,7 +118,7 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    
    Model                      |    Dev         |    Test 
    -------------------------- |----------------|--------------  
-   Transformer + Greedy       |    36.50       |    36.12     
+   Transformer + Greedy       |    36.36       |    36.05     
    Transformer + Beam         |    -           |    -     
 
 
