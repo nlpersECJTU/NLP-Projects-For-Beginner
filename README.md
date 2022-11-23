@@ -110,7 +110,7 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
 - Paper2: Attention is All You Need (NIPS 2017)
 - The Annotated Transformer: http://nlp.seas.harvard.edu/2018/04/03/attention.html
 - Reference1: https://github.com/hyunwoongko/transformer (主要是参考这个代码写的)
-- Reference2: https://github.com/hemingkx/ChineseNMT (这个代码有比较详细的注释)
+- Reference2: https://github.com/hemingkx/ChineseNMT (这个代码有比较详细的注释，还有多GPU训练)
 - Most of our code is borrowed from Reference1, and the 'batch_greedy_decode' and 'beam_search' methods in decode.py are borrowed from Reference 2.
 
 to be continiued...
