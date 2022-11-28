@@ -109,13 +109,15 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    - Paper1: Neural Machine Translation by Jointly Learning to Align and Translate (ICLR 2015)
    - Paper2: Attention is All You Need (NIPS 2017)
    - The Annotated Transformer: http://nlp.seas.harvard.edu/2018/04/03/attention.html
-   - Reference1: Beam Search, https://zhuanlan.zhihu.com/p/114669778
-   - Reference2: https://github.com/hyunwoongko/transformer (主要是参考这个代码)
-   - Reference3: https://github.com/hemingkx/ChineseNMT (有比较详细的注释，还有多GPU训练)
-   - Most of our code is borrowed from Reference2, 
-   - the 'beam_search' method in decode.py is borrowed from Reference 1 (目前还有问题).
+   
+   1. Most of our code is borrowed from Reference2 
+   2. The 'beam_search' method in decode.py is borrowed from Reference 1 (目前还有问题).
+   3. Data: PyTorch 自带的 Multi30k 数据集
+   4. Reference1: Beam Search, https://zhuanlan.zhihu.com/p/114669778
+   5. Reference2: https://github.com/hyunwoongko/transformer (主要是参考这个代码)
+   6. Reference3: https://github.com/hemingkx/ChineseNMT (有比较详细的注释，还有多GPU训练)
 
-   - BLEU Scorces on Multi30k (en_de)
+   - BLEU Scorces on PyTorch 自带的 Multi30k  (en_de)
    
    Model                      |    Dev         |    Test 
    -------------------------- |----------------|--------------  
