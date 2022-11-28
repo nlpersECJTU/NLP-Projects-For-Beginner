@@ -99,7 +99,8 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    - Paper4: Constituency Parsing with a Self-Attentive Encoder (ACL 2018)
    1. Transition-based model: P4 parser/Dependency Parser/transition-parser 
    2. Graph-based model: P4 parser/Dependency Parser/graph-parser
-   3. Data: https://drive.google.com/file/d/1z8Q-dIgqJSA4sWC69AXxJjY3VLtLWdeJ/view?usp=sharing
+   3. Data: https://drive.google.com/file/d/1z8Q-dIgqJSA4sWC69AXxJjY3VLtLWdeJ/view?usp=sharing, 
+            https://pan.baidu.com/s/121FYYpPqPNHj6wG9EFvFkA password: 6mdh
    4. Reference: https://github.com/elikip/bist-parser/
 
 
