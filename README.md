@@ -134,8 +134,8 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    Transformer + Beam   (batch_size=256)      |    Dev         |    Test 
    ------------------------------------------ |----------------|--------------  
    beam_size = 3                              |    -           |    -     
-   beam_size = 3                              |    -           |    -     
-   beam_size = 3                              |    -           |    -     
-   beam_size = 3                              |    -           |    -     
+   beam_size = 4                              |    -           |    -     
+   beam_size = 5                              |    -           |    -     
+   beam_size = 6                              |    -           |    -     
 
 
