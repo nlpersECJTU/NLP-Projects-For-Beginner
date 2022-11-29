@@ -128,6 +128,7 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    Transformer + Beam   (batch_size=128)      |    -           |    -     
    Transformer + Greedy (batch_size=256)      |    -           |    -     
    Transformer + Beam   (batch_size=256)      |    -           |    -     
-
+   
+   It seems that the larger batch size is helpful.
 
 
