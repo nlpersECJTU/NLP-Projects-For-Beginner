@@ -114,7 +114,7 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    1. Most of our code is borrowed from Reference2 
    2. The 'beam_search' method in decode.py is borrowed from Reference 1 (目前还有问题).
    3. Data: PyTorch 自带的 Multi30k 数据集
-   4. Reference1: Beam Search, https://zhuanlan.zhihu.com/p/114669778
+   4. Reference1: https://zhuanlan.zhihu.com/p/114669778 (Beam Search)
    5. Reference2: https://github.com/hyunwoongko/transformer (主要是参考这个代码)
    6. Reference3: https://github.com/hemingkx/ChineseNMT (有比较详细的注释，还有多GPU训练)
 
