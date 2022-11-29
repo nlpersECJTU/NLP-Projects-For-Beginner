@@ -122,6 +122,8 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    
    Model                                      |    Dev         |    Test 
    ------------------------------------------ |----------------|--------------  
+   Transformer + Greedy (batch_size=64)       |    -           |    -     
+   Transformer + Beam   (batch_size=64)       |    -           |    -     
    Transformer + Greedy (batch_size=128)      |    -           |    -     
    Transformer + Beam   (batch_size=128)      |    -           |    -     
    Transformer + Greedy (batch_size=256)      |    -           |    -     
