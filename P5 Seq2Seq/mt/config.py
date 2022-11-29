@@ -34,6 +34,7 @@ class Config:
         self.decode_max_len = config['decode_max_len']
         self.beam_size = config['beam_size']
         self.length_penalty = config['length_penalty']
+        self.less_gpu = config['less_gpu']
         
         # random seed
         self.seed = np.random.randint(1e8)
@@ -55,6 +56,7 @@ class Config:
 
         # bool
         self.use_beam = bool(self.use_beam)
+        self.less_gpu = bool(self.less_gpu)
 
         
     def __repr__(self):

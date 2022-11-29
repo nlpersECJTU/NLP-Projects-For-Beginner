@@ -13,7 +13,7 @@ from layers.transformer import Transformer
 from config import Config
 from bleu import get_bleu
 # from torchtext.data.metrics import bleu_score
-from decode import batch_greedy_decode, beam_search
+from decode import batch_greedy_decode, beam_search, beam_search_less_gpu
 
 
 def count_parameters(m):
@@ -73,7 +73,8 @@ def evaluate(model, data_iter, criterion, use_beam=False):
             # the predicted previous words are used
             # calculate the bleu score based on the translation
             if use_beam:
-                batch_cand = beam_search(model, 
+                beam_search_method = beam_search_less_gpu if conf.less_gpu else beam_search
+                batch_cand = beam_search_method(model, 
                                          src,
                                          conf.beam_size,
                                          conf.length_penalty, 
@@ -95,6 +96,11 @@ def evaluate(model, data_iter, criterion, use_beam=False):
 
             candidates.extend(batch_cand)
             references.extend(batch_ref)
+
+            # for debug
+            # if i > 2:
+            #     break
+
     total_bleu = get_bleu(candidates, references)
 
     return epoch_loss / len(data_iter), total_bleu
@@ -128,10 +134,11 @@ if __name__ == "__main__":
     parser.add_argument('--weight_decay', type=float)
     parser.add_argument('--epoch', type=int)
 
-    parser.add_argument('--use_beam', type=int)   # 0 not use
+    parser.add_argument('--use_beam', type=int)   # 1 yes (use beam search for decode), 0 no (use greedy decode)  
     parser.add_argument('--decode_max_len', type=int)
     parser.add_argument('--beam_size', type=int)
     parser.add_argument('--length_penalty', type=float)
+    parser.add_argument('--less_gpu', type=int)   # 1 yes, less gpu but more decoding time when beam search
     parser.add_argument('--seed', type=int)
 
     # args and logg
@@ -201,6 +208,10 @@ if __name__ == "__main__":
     best_bleu = 0.
     train_losses, valid_losses, bleus = [], [], []
     for step in range(conf.epoch):
+        # for debug
+        # if step > 0:
+        #     print("debug ...")   # we can set breakpoint on this line
+
         start_time = time.time()
         train_loss = train_epoch(model, train_iter, optimizer, criterion)
         valid_loss, valid_bleu = evaluate(model, valid_iter, criterion, conf.use_beam)
@@ -208,9 +219,6 @@ if __name__ == "__main__":
 
         if step > conf.warmup:
             scheduler.step(valid_loss)
-
-        if step > 10:
-            print("debug ...")
 
         train_losses.append(train_loss)
         valid_losses.append(valid_loss)
@@ -231,6 +239,6 @@ if __name__ == "__main__":
     # test the trained model
     logg.info('Load the best checkpoint model ...')
     model.load_state_dict(torch.load(conf.ckpdir))
-    test_loss, test_bleu = evaluate(model, test_iter, criterion)
+    test_loss, test_bleu = evaluate(model, test_iter, criterion, conf.use_beam)
     logg.info(f'Test Loss: {test_loss:.3f}, Test Score: {test_bleu:.4f}')
     logg.info("")

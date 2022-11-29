@@ -137,6 +137,8 @@ def beam_search(model, src, beam_size=3, length_penalty=0.7, max_len=64, sos=2, 
     generated_hyps = [BeamHypotheses(beam_size, max_len, length_penalty) for _ in range(batch_size)]
     # scores of generated_hyps
     beam_scores = torch.zeros((batch_size, beam_size), dtype=torch.float, device=device)
+    # 避免生成的多个翻译是一样的
+    beam_scores[:, 1:] = -1e9
     beam_scores = beam_scores.view(-1)
 
     # Is translating each source sentence done ?
@@ -163,15 +165,13 @@ def beam_search(model, src, beam_size=3, length_penalty=0.7, max_len=64, sos=2, 
                             src_enc,
                             tgt_mask, 
                             tgt_src_mask)
-        out_log_scores = torch.log(softmax(out_logits))
-
-        # TODO
-
+        
         # how to compute the score of each hyp={t1, t2, ..., tn}?
         # p(hyp) = p(t1|src) * p(t2| src, t1) * ... * p(tn|src, t1, t2, ..., t_n-1)
         # score(hyp) = log p(hyp) = log p(t1|src) + log p(t2| src, t1) + ... + log p(tn|src, t1, t2, ..., t_n-1)
         # after log, we can just add (instead of multiply) the score the next token
-        scores = out_log_scores[:, -1, :]
+        scores = out_logits[:, -1, :]
+        scores = torch.log(softmax(scores))
         next_scores = scores + beam_scores.unsqueeze(-1)
 
         # reshape next_scores as (batch_size, beam_size * vocab_size)
@@ -179,7 +179,7 @@ def beam_search(model, src, beam_size=3, length_penalty=0.7, max_len=64, sos=2, 
         next_scores = next_scores.view(batch_size, 
                                        beam_size * model.dec_voc_size)
         next_scores, next_tokens = torch.topk(next_scores, 
-                                              2 * beam_size,
+                                              3 * beam_size,
                                               dim=1, 
                                               largest=True,
                                               sorted=True)
@@ -214,7 +214,7 @@ def beam_search(model, src, beam_size=3, length_penalty=0.7, max_len=64, sos=2, 
                 if len(next_sent_beam) == beam_size:
                     break
 
-            # 
+            # 是否翻译结束？
             done[batch_idx] = done[batch_idx] or \
                 generated_hyps[batch_idx].is_done(next_scores[batch_idx].max().item(), cur_len)
             next_batch_beam.extend(next_sent_beam)
@@ -258,3 +258,152 @@ def beam_search(model, src, beam_size=3, length_penalty=0.7, max_len=64, sos=2, 
 
     return results
     
+
+
+# less gpu, more time
+# we can also use an additional hyper-parameter 'beam_batch_size' for decoding, 
+# which can be different with ‘batch_size‘ for training,
+# to consume less gpu
+def beam_search_less_gpu(model, src, beam_size=3, length_penalty=0.7, max_len=64, sos=2, eos=3):
+    """
+    https://zhuanlan.zhihu.com/p/114669778
+    把上面网页的方法梢作调整即可
+    """
+
+    batch_size = src.size(0)
+    device = model.device
+    softmax = torch.nn.Softmax(dim=-1)
+    generated_hyps = [BeamHypotheses(beam_size, max_len, length_penalty) for _ in range(batch_size)]
+    # scores of generated_hyps
+    beam_scores = torch.zeros((batch_size, beam_size), dtype=torch.float, device=device)
+    # 避免生成的多个翻译是一样的
+    beam_scores[:, 1:] = -1e9
+    beam_scores = beam_scores.view(-1)
+
+    # Is translating each source sentence done ?
+    done = [False for _ in range(batch_size)]
+
+    # encode src
+    src_mask = make_pad_mask(src, src, model.src_pad_idx, model.src_pad_idx)
+    src_enc = model.encoder(src, src_mask)
+
+    # init tgt input, batch_size * beam_size
+    # generated all hypotheses in parallel
+    tgt = torch.Tensor(batch_size * beam_size, 1).fill_(sos).type_as(src.data)
+    cur_len = 1
+    
+    for i in range(max_len):
+        next_scores = []
+        next_tokens = []
+        for beam_id in range(beam_size):
+            tgt_ = tgt[beam_id::beam_size]
+            tgt_src_mask = make_pad_mask(tgt_, src, model.tgt_pad_idx, model.src_pad_idx)
+            tgt_mask = make_pad_mask(tgt_, tgt_, model.tgt_pad_idx, model.tgt_pad_idx) * make_tril_mask(tgt_, tgt_).to(device)
+            out_logits = model.decoder(tgt_, 
+                                       src_enc,
+                                       tgt_mask, 
+                                       tgt_src_mask)
+            
+            # how to compute the score of each hyp={t1, t2, ..., tn}?
+            # p(hyp) = p(t1|src) * p(t2| src, t1) * ... * p(tn|src, t1, t2, ..., t_n-1)
+            # score(hyp) = log p(hyp) = log p(t1|src) + log p(t2| src, t1) + ... + log p(tn|src, t1, t2, ..., t_n-1)
+            # after log, we can just add (instead of multiply) the score the next token    
+            scores = out_logits[:, -1, :]
+            scores = torch.log(softmax(scores))
+            # beam_next_scores = scores + beam_scores[batch_size * beam_id : batch_size * (beam_id + 1)].unsqueeze(-1)
+            beam_next_scores = scores + beam_scores[beam_id::beam_size].unsqueeze(-1)
+
+            # local top-k scores and their corresponding tokens
+            beam_next_scores, beam_next_tokens = torch.topk(beam_next_scores, 
+                                                  3 * beam_size,
+                                                  dim=1, 
+                                                  largest=True,
+                                                  sorted=True)
+            beam_next_tokens = beam_next_tokens + beam_id * model.dec_voc_size
+            next_scores.append(beam_next_scores)
+            next_tokens.append(beam_next_tokens)
+        
+        # global top-k scores and next tokens
+        next_scores = torch.cat(next_scores, dim=-1)
+        next_tokens = torch.cat(next_tokens, dim=-1)
+        next_scores, next_scores_id = torch.topk(next_scores,
+                                                 3 * beam_size,
+                                                 dim=1,
+                                                 largest=True,
+                                                 sorted=True)
+        next_tokens = next_tokens.gather(dim=1, index=next_scores_id)
+        
+        # constuct the next tgt by cat the predicted next_tokens
+        # each element in next_batch_beam (score, token_id, beam_id)
+        next_batch_beam = []
+        for batch_idx in range(batch_size):
+            if done[batch_idx]:
+                next_batch_beam.extend([(0, model.tgt_pad_idx, 0)] * beam_size)
+                continue
+
+            next_sent_beam = []
+            for beam_token_rank, (beam_token_id, beam_token_score) in enumerate(
+                            zip(next_tokens[batch_idx], next_scores[batch_idx])):
+
+                beam_id = torch.div(beam_token_id, model.dec_voc_size, rounding_mode='trunc')
+                token_id = beam_token_id % model.dec_voc_size
+                effective_beam_id = batch_idx * beam_size + beam_id
+
+                if (token_id.item() == eos):
+                    # if beam token does not belong to top beam_size tokens, it should not be added
+                    if beam_token_rank >= beam_size:
+                        continue
+                    # add hyp
+                    generated_hyps[batch_idx].add(
+                        tgt[effective_beam_id].clone(), beam_token_score.item()
+                    )
+                else:
+                    next_sent_beam.append((beam_token_score, token_id, effective_beam_id))
+
+                if len(next_sent_beam) == beam_size:
+                    break
+
+            # 是否翻译结束？
+            # 是否有更好的判断结束的条件 TODO
+            done[batch_idx] = done[batch_idx] or \
+                generated_hyps[batch_idx].is_done(next_scores[batch_idx].max().item(), cur_len)
+            next_batch_beam.extend(next_sent_beam)
+        
+        # 全部翻译完成
+        if all(done):
+            break
+
+        # 准备下一次的Target
+        beam_scores = beam_scores.new([x[0] for x in next_batch_beam])
+        beam_tokens = tgt.new([x[1] for x in next_batch_beam])
+        beam_idx = tgt.new([x[2] for x in next_batch_beam])
+
+        # pad the predicted words to prepare the next tgt
+        tgt = tgt[beam_idx, :]
+        tgt = torch.cat([tgt, beam_tokens.unsqueeze(1)], dim=-1)
+
+        # update length
+        cur_len = cur_len + 1
+
+    # beam search is done, then prepare output
+    for batch_idx in range(batch_size):
+        if done[batch_idx]:
+            continue
+        
+        # some sentences may not ended with eos
+        for beam_id in range(beam_size):
+            effective_beam_id = batch_idx * beam_size + beam_id
+            final_score = beam_scores[effective_beam_id].item()
+            final_tokens = tgt[effective_beam_id]
+            generated_hyps[batch_idx].add(final_tokens, final_score)
+    
+    # output the best one here, as List  
+    # we can also return the top-k best ones
+    results = [[] for _ in range(batch_size)]
+    for i, hyps in enumerate(generated_hyps):
+        sorted_hyps = sorted(hyps.beams, key=lambda x: x[0])
+        best_hyp = sorted_hyps.pop()[1]
+        best_hyp = [x.item() for x in best_hyp]
+        results[i] = best_hyp
+
+    return results
