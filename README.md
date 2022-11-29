@@ -28,7 +28,7 @@ PyTorch 1.0 or above
    
    
    <!--- ![DSWE](pic/test.jpg) -->
-   CBOW
+   SimpCBOW
    ![DSWE](pic/cbow.jpg)
    
    DSWE
