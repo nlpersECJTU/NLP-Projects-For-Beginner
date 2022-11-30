@@ -24,7 +24,7 @@ PyTorch 1.0 or above
    - Paper6: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (NAACL 2019, dynamical word embeddings)
    
    1. SimpCBOW: Learning general word embeddings based on unlabeled data using the CBOW model in Paper 1 (simplified here, just for demo). 
-   2. DSWE: Learn task-specific word embedding via the Connective classification task as that in Paper 3, the labeled data is necessary. 
+   2. DSWE: Learn task-specific word embedding via the Connective classification task as that in Paper 4, the labeled data is necessary. 
             DSWE is inspired by the model in Paper2, which is proposed to learn the sentiment-specific word embeddings.
    3. Data: https://pan.baidu.com/s/12uqXtjCBud0-A9Ilda1kOg?pwd=324q, password: 324q
             https://drive.google.com/file/d/1SeC3OcGI5MZh2G8oF5mTm1KP0OJUwhsQ/view?usp=sharing
@@ -47,9 +47,10 @@ PyTorch 1.0 or above
    - Paper2: Learning Semantic Representations of Users and Products for Document Level Sentiment Classification (ACL 2015)
    - Paper3: Improving Review Representations with User Attention and Product Attention for Sentiment Classification (AAAI 2018)
    - Web: https://blog.csdn.net/malefactor/article/details/78767781 
-   1. Hierarchical Attention Model without User and Product Attributes (HAN) : P2 Text Classification/SentimentUP/HAN. 
-   2. Hierarchical Attention Model With User and Product Attributes (HAN_UP) : P2 Text Classification/SentimentUP/HAN_UP. 
-                   Different from the model in AAAI 2018, we leverage User and Prodcut attributes in different ways.
+   
+   1. Hierarchical Attention Model without User and Product Attributes (HAN, Paper1) : P2 Text Classification/SentimentUP/HAN. 
+   2. Hierarchical Attention Model With User and Product Attributes (HAN_UP, Similar to Paper3) : P2 Text Classification/SentimentUP/HAN_UP. 
+                   Different from the model in Paper3, we leverage User and Prodcut attributes in different ways.
                    Specifically, the User attribute is incorporated at word-level, sentence-level and document level in a fusion way,  
                    while the Product attribute is incorporated into word-level and sentence-level attention mechanisms following AAAI 2018.
    4. Data: the Yelp 2013, Yelp 2014, IMDB datasets are provided by authors of Paper2. 
@@ -80,10 +81,10 @@ PyTorch 1.0 or above
 - Data: cner/data, CLUENER (https://github.com/CLUEbenchmark/CLUENER)
 - Thanks: the key code is borrowed from https://github.com/lonePatient/BERT-NER-Pytorch
 
-1. BERT + Softmax: simply stack a Softmax layer on outputs of BERT for Chinese NER.
-2. BERT + CRF: a classific model, using a neural CRF layer to model the dependence of labels (B-PER is usually followed by I-PER).
-3. BERT + Span: check out the begin labels and end labels respectively, then pair the nearest begin label and end label with the same entity type as an entity.
-4. BERT + Word-Word (Paper 4): https://github.com/ljynlp/W2NER
+1. BERT + Softmax (Paper1): simply stack a Softmax layer on outputs of BERT for Chinese NER.
+2. BERT + CRF (Paper1): a classific model, using a neural CRF layer to model the dependence of labels (B-PER is usually followed by I-PER).
+3. BERT + Span (Paper2): check out the begin labels and end labels respectively, then pair the nearest begin label and end label with the same entity type as an entity.
+4. BERT + Word-Word (Paper 5): https://github.com/ljynlp/W2NER
 
 - F1 Results (entity)
    
@@ -103,8 +104,8 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    - Paper3: Deep biaffine attention for neural dependency parsing (ICLR 2017)
    - Paper4: Constituency Parsing with a Self-Attentive Encoder (ACL 2018)
    
-   1. Transition-based model: P4 parser/Dependency Parser/transition-parser 
-   2. Graph-based model: P4 parser/Dependency Parser/graph-parser
+   1. Transition-based model (Paper1): P4 parser/Dependency Parser/transition-parser 
+   2. Graph-based model (Paper1): P4 parser/Dependency Parser/graph-parser
    3. Data: https://drive.google.com/file/d/1z8Q-dIgqJSA4sWC69AXxJjY3VLtLWdeJ/view?usp=sharing, 
             https://pan.baidu.com/s/121FYYpPqPNHj6wG9EFvFkA password: 6mdh
    4. Reference: https://github.com/elikip/bist-parser/
