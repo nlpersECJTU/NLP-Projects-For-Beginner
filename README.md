@@ -1,6 +1,6 @@
 # Projects-For-NLP-Bigenner
 
-Typical projects for NLP beginners.
+Typical projects for NLP beginners. \
 注意：刚学时，先看那些与代码相关的论文，其他扩展的论文可以有一定的基础后再看。
 
 ## Environment
