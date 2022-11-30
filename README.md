@@ -106,18 +106,18 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    
    Model (on en-ud-proj)   |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
    ----------------------- |----------------|------------------|------------------|------------  
-   Transition-based model  |    -       |    -         |   -          | -
-   Graph-based model       |    -       |    -         |   -          | -
+   Transition  |    -       |    -         |   -          | -
+   Graph       |    -       |    -         |   -          | -
    
    Model (on en-universal) |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
    ----------------------- |----------------|------------------|------------------|------------  
-   Transition-based model  |    -       |    -         |   -          | -
-   Graph-based model       |    -       |    -         |   -          | -
+   Transition  |    -       |    -         |   -          | -
+   Graph       |    -       |    -         |   -          | -
    
    Model (on zh-ud-proj)   |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
    ----------------------- |----------------|------------------|------------------|------------  
-   Transition-based model  |    -       |    -         |   -          | -
-   Graph-based model       |    -       |    -         |   -          | -
+   Transition  |    -       |    -         |   -          | -
+   Graph       |    -       |    -         |   -          | -
 
 
 
