@@ -19,7 +19,7 @@ PyTorch 1.0 or above
    
    - Paper1: Distributed Representations of Words and Phrases and their Compositionality (NIPS 2013，代码相关论文) 
    - Paper2: Glove: Global Vectors for Word Representation (EMNLP 2014)
-   - Paper3: Learning Sentiment-Specific Word Embedding for Twitter Sentiment Classification (ACL 2014)
+   - Paper3: Learning Sentiment-Specific Word Embedding for Twitter Sentiment Classification (ACL 2014，代码相关论文)
    - Paper4: Improving Implicit Discourse Relation Recognition with Discourse-specificWord Embeddings (ACL 2017，代码相关论文)
    - Paper5: Deep Contextualized Word Representations (NAACL 2018, dynamical word embeddings)
    - Paper6: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (NAACL 2019, dynamical word embeddings)
@@ -99,7 +99,7 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
 ### Dependency Parser 
    
    - Paper1: Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations (TACL 2016，代码相关论文) 
-   - Paper2: Transition-Based Dependency Parsing with Stack Long Short-Term Memory (ACL 2015)
+   - Paper2: Transition-Based Dependency Parsing with Stack Long Short-Term Memory (ACL 2015，代码相关论文)
    - Paper3: Deep biaffine attention for neural dependency parsing (ICLR 2017)
    - Paper4: Constituency Parsing with a Self-Attentive Encoder (ACL 2018)
    
