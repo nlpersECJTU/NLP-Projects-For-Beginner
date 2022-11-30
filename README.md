@@ -16,9 +16,13 @@ PyTorch 1.0 or above
 ## P1 Word Embeddings
 ### Learning Word Embeddings    
    
-   - Paper1: Distributed Representations ofWords and Phrases and their Compositionality (NIPS 2013) 
-   - Paper2: Learning Sentiment-Specific Word Embedding for Twitter Sentiment Classification (ACL 2014)
-   - Paper3: Improving Implicit Discourse Relation Recognition with Discourse-specificWord Embeddings (ACL 2017)
+   - Paper1: Distributed Representations of Words and Phrases and their Compositionality (NIPS 2013) 
+   - Paper2: Glove: Global Vectors for Word Representation (EMNLP 2014)
+   - Paper3: Learning Sentiment-Specific Word Embedding for Twitter Sentiment Classification (ACL 2014)
+   - Paper4: Improving Implicit Discourse Relation Recognition with Discourse-specificWord Embeddings (ACL 2017)
+   - Paper5: Deep Contextualized Word Representations (NAACL 2018, dynamical word embeddings)
+   - Paper6: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (NAACL 2019, dynamical word embeddings)
+   
    1. SimpCBOW: Learning general word embeddings based on unlabeled data using the CBOW model in Paper 1 (simplified here, just for demo). 
    2. DSWE: Learn task-specific word embedding via the Connective classification task as that in Paper 3, the labeled data is necessary. 
             DSWE is inspired by the model in Paper2, which is proposed to learn the sentiment-specific word embeddings.
