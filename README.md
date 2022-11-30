@@ -68,9 +68,10 @@ PyTorch 1.0 or above
 - Paper1: Bidirectional LSTM-CRF Models for Sequence Tagging (Arxiv 2015)
 - Paper2: A Local Detection Approach for Named Entity Recognition and Mention Detection (ACL 2017)
 - Paper3: Chinese NER Using Lattice LSTM (ACL 2018)
-- Paper4: Unified Named Entity Recognition as Word-Word Relation Classiﬁcation (AAAI 2022)
-- Paper5: 基于深度学习的命名实体识别综述 (中文信息学报 2021)
-- Paper6: 基于深度学习的中文命名实体识别最新研究进展综述 (中文信息学报 2022)
+- Paper4: Named Entity Recognition as Dependency Parsing (ACL 2020)
+- Paper5: Unified Named Entity Recognition as Word-Word Relation Classiﬁcation (AAAI 2022)
+- Paper6: 基于深度学习的命名实体识别综述 (中文信息学报 2021)
+- Paper7: 基于深度学习的中文命名实体识别最新研究进展综述 (中文信息学报 2022)
 - CRF: https://zhuanlan.zhihu.com/p/44042528
 - Data: cner/data, CLUENER (https://github.com/CLUEbenchmark/CLUENER)
 - Thanks: the key code is borrowed from https://github.com/lonePatient/BERT-NER-Pytorch
