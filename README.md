@@ -76,7 +76,7 @@ PyTorch 1.0 or above
 1. BERT + Softmax (Paper1): simply stack a Softmax layer on outputs of BERT for Chinese NER.
 2. BERT + CRF (Paper1): a classific model, using a neural CRF layer to model the dependence of labels (B-PER is usually followed by I-PER).
 3. BERT + Span (Paper2): check out the begin labels and end labels respectively, then pair the nearest begin label and end label with the same entity type as an entity.
-4. BERT + Word-Word (Paper 5): https://github.com/ljynlp/W2NER
+4. BERT + Word-Word (Paper 3): https://github.com/ljynlp/W2NER
 
 - F1 Results (entity)
    
