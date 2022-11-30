@@ -104,17 +104,17 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
 
    - UAS and LAS Results
    
-   Model (on en-ud-proj)   |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
+   Model (en-ud-proj)   |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
    ----------------------- |----------------|------------------|------------------|------------  
    Transition  |    -       |    -         |   -          | -
    Graph       |    -       |    -         |   -          | -
    
-   Model (on en-universal) |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
+   Model (en-universal) |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
    ----------------------- |----------------|------------------|------------------|------------  
    Transition  |    -       |    -         |   -          | -
    Graph       |    -       |    -         |   -          | -
    
-   Model (on zh-ud-proj)   |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
+   Model (zh-ud-proj)   |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
    ----------------------- |----------------|------------------|------------------|------------  
    Transition  |    -       |    -         |   -          | -
    Graph       |    -       |    -         |   -          | -
