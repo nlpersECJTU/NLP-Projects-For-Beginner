@@ -102,6 +102,24 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
             https://pan.baidu.com/s/121FYYpPqPNHj6wG9EFvFkA password: 6mdh
    4. Reference: https://github.com/elikip/bist-parser/
 
+   - UAS and LAS Results
+   
+   Model (on en-ud-proj)   |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
+   ----------------------- |----------------|------------------|------------------|------------  
+   Transition-based model  |    -       |    -         |   -          | -
+   Graph-based model       |    -       |    -         |   -          | -
+   
+   Model (on en-universal) |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
+   ----------------------- |----------------|------------------|------------------|------------  
+   Transition-based model  |    -       |    -         |   -          | -
+   Graph-based model       |    -       |    -         |   -          | -
+   
+   Model (on zh-ud-proj)   |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
+   ----------------------- |----------------|------------------|------------------|------------  
+   Transition-based model  |    -       |    -         |   -          | -
+   Graph-based model       |    -       |    -         |   -          | -
+
+
 
 ## P5 Seq2Seq
 ### Machine Translation
