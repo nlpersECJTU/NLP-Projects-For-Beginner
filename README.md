@@ -94,7 +94,6 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    - Paper1: Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations (TACL 2016) 
    - Paper2: Transition-Based Dependency Parsing with Stack Long Short-Term Memory (ACL 2015)
    - Paper3: Deep biaffine attention for neural dependency parsing (ICLR 2017)
-   - Paper4: Constituency Parsing with a Self-Attentive Encoder (ACL 2018)
    
    1. Transition-based model (Paper1): Dependency Parser/transition-parser 
    2. Graph-based model (Paper1): Dependency Parser/graph-parser
