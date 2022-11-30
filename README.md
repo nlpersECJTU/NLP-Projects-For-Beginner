@@ -1,6 +1,7 @@
 # Projects-For-NLP-Bigenner
 
 Typical projects for NLP beginners.
+注意：刚学时，先看那些与代码相关的论文，其他扩展的论文可以有一定的基础后再看。
 
 ## Environment
 Python 3.8 \
@@ -16,10 +17,10 @@ PyTorch 1.0 or above
 ## P1 Word Embeddings
 ### Learning Word Embeddings    
    
-   - Paper1: Distributed Representations of Words and Phrases and their Compositionality (NIPS 2013) 
+   - Paper1: Distributed Representations of Words and Phrases and their Compositionality (NIPS 2013，代码相关论文) 
    - Paper2: Glove: Global Vectors for Word Representation (EMNLP 2014)
    - Paper3: Learning Sentiment-Specific Word Embedding for Twitter Sentiment Classification (ACL 2014)
-   - Paper4: Improving Implicit Discourse Relation Recognition with Discourse-specificWord Embeddings (ACL 2017)
+   - Paper4: Improving Implicit Discourse Relation Recognition with Discourse-specificWord Embeddings (ACL 2017，代码相关论文)
    - Paper5: Deep Contextualized Word Representations (NAACL 2018, dynamical word embeddings)
    - Paper6: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (NAACL 2019, dynamical word embeddings)
    
@@ -43,9 +44,9 @@ PyTorch 1.0 or above
 ## P2 Text Classification
 ### Document-level Sentiment Classificaiton 
    
-   - Paper1: Hierarchical Attention Networks for Document Classification (NAACL 2016) 
+   - Paper1: Hierarchical Attention Networks for Document Classification (NAACL 2016，代码相关论文) 
    - Paper2: Learning Semantic Representations of Users and Products for Document Level Sentiment Classification (ACL 2015)
-   - Paper3: Improving Review Representations with User Attention and Product Attention for Sentiment Classification (AAAI 2018)
+   - Paper3: Improving Review Representations with User Attention and Product Attention for Sentiment Classification (AAAI 2018，代码相关论文)
    - Web: https://blog.csdn.net/malefactor/article/details/78767781 
    
    1. Hierarchical Attention Model without User and Product Attributes (HAN, Paper1) : P2 Text Classification/SentimentUP/HAN. 
@@ -68,8 +69,8 @@ PyTorch 1.0 or above
 
 ## P3 NER&Event
 ### Chinese Named Entity Recognition
-- Paper1: Bidirectional LSTM-CRF Models for Sequence Tagging (Arxiv 2015)
-- Paper2: A Local Detection Approach for Named Entity Recognition and Mention Detection (ACL 2017)
+- Paper1: Bidirectional LSTM-CRF Models for Sequence Tagging (Arxiv 2015，代码相关论文)
+- Paper2: A Local Detection Approach for Named Entity Recognition and Mention Detection (ACL 2017，代码相关论文)
 - Paper3: Chinese NER Using Lattice LSTM (ACL 2018)
 - Paper4: Named Entity Recognition as Dependency Parsing (ACL 2020)
 - Paper5: Unified Named Entity Recognition as Word-Word Relation Classiﬁcation (AAAI 2022)
@@ -97,7 +98,7 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
 ## P4 Parser
 ### Dependency Parser 
    
-   - Paper1: Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations (TACL 2016) 
+   - Paper1: Simple and Accurate Dependency Parsing Using Bidirectional LSTM Feature Representations (TACL 2016，代码相关论文) 
    - Paper2: Transition-Based Dependency Parsing with Stack Long Short-Term Memory (ACL 2015)
    - Paper3: Deep biaffine attention for neural dependency parsing (ICLR 2017)
    - Paper4: Constituency Parsing with a Self-Attentive Encoder (ACL 2018)
@@ -112,9 +113,9 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
 ## P5 Seq2Seq
 ### Machine Translation
 
-   - Paper1: Neural Machine Translation by Jointly Learning to Align and Translate (ICLR 2015)
+   - Paper1: Neural Machine Translation by Jointly Learning to Align and Translate (ICLR 2015，代码相关论文)
    - Paper2: Modeling Coverage for Neural Machine Translation (ACL 2016)
-   - Paper3: Attention is All You Need (NIPS 2017)
+   - Paper3: Attention is All You Need (NIPS 2017，代码相关论文) 
    - Paper4: Asynchronous Bidirectional Decoding for Neural Machine Translation (AAAI 2018)
    - Paper5: Incorporating BERT into Neural Machine Translation (ICLR 2020)
    - The Annotated Transformer: http://nlp.seas.harvard.edu/2018/04/03/attention.html
