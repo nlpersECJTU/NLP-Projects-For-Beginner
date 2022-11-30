@@ -136,5 +136,6 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    beam_size = 4                              |    39.60       |    38.63     
    beam_size = 5                              |    39.60       |    38.23     
    beam_size = 6                              |    -           |    -     
-
+   
+   It seems that the larger 'beam size' is also helpful.
 
