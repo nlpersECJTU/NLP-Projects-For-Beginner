@@ -50,9 +50,7 @@ PyTorch 1.0 or above
    
    1. Hierarchical Attention Model without User and Product Attributes (HAN, Paper1) : P2 Text Classification/SentimentUP/HAN. 
    2. Hierarchical Attention Model With User and Product Attributes (HAN_UP, Similar to Paper3) : P2 Text Classification/SentimentUP/HAN_UP. 
-                   Different from the model in Paper3, we leverage User and Prodcut attributes in different ways.
-                   Specifically, the User attribute is incorporated at word-level, sentence-level and document level in a fusion way,  
-                   while the Product attribute is incorporated into word-level and sentence-level attention mechanisms following AAAI 2018.
+                   Different from the model in Paper3, we leverage User and Prodcut attributes in different ways. Specifically, the User attribute is incorporated at word-level, sentence-level and document level in a fusion way, while the Product attribute is incorporated into word-level and sentence-level attention mechanisms following AAAI 2018.
    4. Data: the Yelp 2013, Yelp 2014, IMDB datasets are provided by authors of Paper2. 
    5. Word embeddings: provided by authors of Paper3
    6. Download data and embeddings: https://drive.google.com/file/d/18dXcCXl5txAf-WaxlXgyuPVdUkbXCkmF/view?usp=sharing
