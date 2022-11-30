@@ -120,21 +120,21 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
 
    - BLEU Scorces on Multi30k (en_de)
    
-   Model                                      |    Dev         |    Test 
+   Model (beam_size = 3)                      |    Dev         |    Test 
    ------------------------------------------ |----------------|--------------  
-   Transformer + Greedy (batch_size=64)       |    -           |    -     
-   Transformer + Beam   (batch_size=64)       |    -           |    -     
-   Transformer + Greedy (batch_size=128)      |    -           |    -     
-   Transformer + Beam   (batch_size=128)      |    -           |    -     
-   Transformer + Greedy (batch_size=256)      |    -           |    -     
-   Transformer + Beam   (batch_size=256)      |    -           |    -     
+   Transformer + Greedy (batch_size=64)       |    33.06       |    32.90     
+   Transformer + Beam   (batch_size=64)       |    34.48       |    33.85     
+   Transformer + Greedy (batch_size=128)      |    36.88       |    35.61     
+   Transformer + Beam   (batch_size=128)      |    37.66       |    37.07     
+   Transformer + Greedy (batch_size=256)      |    38.62       |    37.59     
+   Transformer + Beam   (batch_size=256)      |    39.65       |    37.57     
    
-   It seems that the larger batch size is helpful.
+   It seems that both 'larger batch size' and 'Beam Search' are helpful.
    
    Transformer + Beam   (batch_size=256)      |    Dev         |    Test 
    ------------------------------------------ |----------------|--------------  
-   beam_size = 3                              |    -           |    -     
-   beam_size = 4                              |    -           |    -     
+   beam_size = 3                              |    39.65       |    37.57     
+   beam_size = 4                              |    39.60       |    38.63     
    beam_size = 5                              |    -           |    -     
    beam_size = 6                              |    -           |    -     
 
