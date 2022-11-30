@@ -153,7 +153,7 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    beam_size = 3                              |    39.65       |    37.57     
    beam_size = 4                              |    39.60       |    38.63     
    beam_size = 5                              |    39.60       |    38.23     
-   beam_size = 6                              |    -           |    -     
+   beam_size = 6                              |    39.59       |    38.13     
    
-   It seems that the larger 'beam size' is also helpful.
+   It seems that the larger 'beam size' is also helpful, and we achieve the best Test bleu score when beam_size = 4.
 
