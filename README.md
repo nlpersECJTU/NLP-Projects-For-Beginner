@@ -97,6 +97,7 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    - Paper2: Transition-Based Dependency Parsing with Stack Long Short-Term Memory (ACL 2015)
    - Paper3: Deep biaffine attention for neural dependency parsing (ICLR 2017)
    - Paper4: Constituency Parsing with a Self-Attentive Encoder (ACL 2018)
+   
    1. Transition-based model: P4 parser/Dependency Parser/transition-parser 
    2. Graph-based model: P4 parser/Dependency Parser/graph-parser
    3. Data: https://drive.google.com/file/d/1z8Q-dIgqJSA4sWC69AXxJjY3VLtLWdeJ/view?usp=sharing, 
@@ -111,6 +112,7 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    - Paper2: Modeling Coverage for Neural Machine Translation (ACL 2016)
    - Paper3: Attention is All You Need (NIPS 2017)
    - Paper4: Asynchronous Bidirectional Decoding for Neural Machine Translation (AAAI 2018)
+   - Paper5: Incorporating BERT into Neural Machine Translation (ICLR 2020)
    - The Annotated Transformer: http://nlp.seas.harvard.edu/2018/04/03/attention.html
    
    1. Most of our code is borrowed from Reference2 
