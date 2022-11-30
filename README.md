@@ -108,7 +108,9 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
 ### Machine Translation
 
    - Paper1: Neural Machine Translation by Jointly Learning to Align and Translate (ICLR 2015)
-   - Paper2: Attention is All You Need (NIPS 2017)
+   - Paper2: Modeling Coverage for Neural Machine Translation (ACL 2016)
+   - Paper3: Attention is All You Need (NIPS 2017)
+   - Paper4: Asynchronous Bidirectional Decoding for Neural Machine Translation (AAAI 2018)
    - The Annotated Transformer: http://nlp.seas.harvard.edu/2018/04/03/attention.html
    
    1. Most of our code is borrowed from Reference2 
