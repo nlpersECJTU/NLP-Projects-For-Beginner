@@ -43,7 +43,7 @@ PyTorch 1.0 or above
    - Paper1: Hierarchical Attention Networks for Document Classification (NAACL 2016) 
    - Paper2: Learning Semantic Representations of Users and Products for Document Level Sentiment Classification (ACL 2015)
    - Paper3: Improving Review Representations with User Attention and Product Attention for Sentiment Classification (AAAI 2018)
-   - Web: https://blog.csdn.net/malefactor/article/details/78767781 
+   - Web: https://blog.csdn.net/malefactor/article/details/78767781 (注意力机制)
    
    1. Hierarchical Attention Model without User and Product Attributes (HAN, Paper1) : SentimentUP/HAN. 
    2. Hierarchical Attention Model With User and Product Attributes (HAN_UP, Paper3) : SentimentUP/HAN_UP. 
@@ -110,7 +110,7 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    - Paper2: Attention is All You Need (NIPS 2017) 
    - The Annotated Transformer: http://nlp.seas.harvard.edu/2018/04/03/attention.html
    
-   1. Most of our code is borrowed from Reference2 
+   1. Most of our code is borrowed from Reference2 (Paper2)
    2. The 'beam_search' method in decode.py is borrowed from Reference 1
    3. Data: PyTorch 自带的 Multi30k 数据集
    4. Reference1: https://zhuanlan.zhihu.com/p/114669778 (Beam Search)
