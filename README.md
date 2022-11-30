@@ -134,7 +134,7 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    ------------------------------------------ |----------------|--------------  
    beam_size = 3                              |    39.65       |    37.57     
    beam_size = 4                              |    39.60       |    38.63     
-   beam_size = 5                              |    -           |    -     
+   beam_size = 5                              |    39.60       |    38.23     
    beam_size = 6                              |    -           |    -     
 
 
