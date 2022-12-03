@@ -104,19 +104,21 @@ Note that, the F1 results on ClueNer and Weibo are not comparable with the F1 sc
    - UAS and LAS Results
    
    Model (en-ud-proj)   |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
-   ----------------------- |----------------|------------------|------------------|------------  
-   Transition  |    -       |    -         |   -          | -
-   Graph       |    -       |    -         |   -          | -
+   ---------------------|----------------|------------------|------------------|---------------  
+   Transition           |    87.51       |    85.19         |   87.27          |     84.89
+   Graph                |    88.25       |    86.06         |   87.97          |     85.82
    
    Model (en-universal) |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
-   ----------------------- |----------------|------------------|------------------|------------  
-   Transition  |    -       |    -         |   -          | -
-   Graph       |    -       |    -         |   -          | -
+   -------------------- |----------------|------------------|------------------|---------------  
+   Transition           |    92.00       |    90.35         |   91.99          |     90.47
+   Graph                |    92.32       |    90.80         |   92.41          |     90.92
    
    Model (zh-ud-proj)   |    UAS (dev)   |    LAS (dev)     |   UAS (test)     |     LAS (test)
-   ----------------------- |----------------|------------------|------------------|------------  
-   Transition  |    -       |    -         |   -          | -
-   Graph       |    -       |    -         |   -          | -
+   -------------------- |----------------|------------------|------------------|------------  
+   Transition           |    81.81       |    78.55         |   84.11          |     80.91
+   Graph                |    82.59       |    79.47         |   85.02          |     82.00
+   
+   As previous studies shown, the Graph-based methods are usually better than the Transition-based methods.
 
 
 
