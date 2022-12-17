@@ -66,18 +66,17 @@ PyTorch 1.0 or above
 ## P3 NER&Event
 ### Chinese Named Entity Recognition
 - Paper1: Bidirectional LSTM-CRF Models for Sequence Tagging (Arxiv 2015)
-- Paper2: A Local Detection Approach for Named Entity Recognition and Mention Detection (ACL 2017)
-- Paper3: Enhanced Language Representation with Label Knowledge for Span Extraction (EMNLP 2021)
-- Paper4: Unified Named Entity Recognition as Word-Word Relation Classiﬁcation (AAAI 2022)
-- Paper5: 基于深度学习的命名实体识别综述 (中文信息学报 2021)
+- Paper2: Enhanced Language Representation with Label Knowledge for Span Extraction (EMNLP 2021) 
+- Paper3: Unified Named Entity Recognition as Word-Word Relation Classiﬁcation (AAAI 2022)
+- Paper4: 基于深度学习的命名实体识别综述 (中文信息学报 2021)
 - CRF: https://zhuanlan.zhihu.com/p/44042528
 - Data: cner/data, CLUENER (https://github.com/CLUEbenchmark/CLUENER)
 - Thanks: the key code is borrowed from https://github.com/lonePatient/BERT-NER-Pytorch
 
 1. BERT + Softmax (Paper1): simply stack a Softmax layer on outputs of BERT for Chinese NER.
 2. BERT + CRF (Paper1): a classific model, using a neural CRF layer to model the dependence of labels (B-PER is usually followed by I-PER).
-3. BERT + Span (Paper2, Paper3): check out the begin labels and end labels respectively, then pair the nearest begin label and end label with the same entity type as an entity.
-4. BERT + Word-Word (Paper4): https://github.com/ljynlp/W2NER
+3. BERT + Span (Paper2): check out the begin labels and end labels respectively, then pair the nearest begin label and end label with the same entity type as an entity.
+4. BERT + Word-Word (Paper3): https://github.com/ljynlp/W2NER
 
 - F1 Results (entity)
    
